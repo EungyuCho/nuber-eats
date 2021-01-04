@@ -1,4 +1,5 @@
-import { Field, ObjectType, Query } from '@nestjs/graphql';
+import { Field, ObjectType } from '@nestjs/graphql';
+import { IsBoolean, IsString, Length } from 'class-validator';
 
 @ObjectType()
 export class Restaurant {
