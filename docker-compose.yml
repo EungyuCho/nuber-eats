@@ -1,0 +1,20 @@
+version: "3"
+services:
+  tests:
+    build:
+      context: .
+      dockerfile: dev.dockerfile
+    volumes:
+      - /usr/src/app/node_modules
+      - ./:/usr/src/app
+    command: [ "npm", "run", "test" ]
+  node-app:
+    build:
+      context: .
+      dockerfile: dev.dockerfile
+    ports:
+      - "3000:3000"
+      - "4000:4000"
+    volumes:
+      - /usr/src/app/node_modules
+      - ./:/usr/src/app
