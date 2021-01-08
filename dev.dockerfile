@@ -6,8 +6,8 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 RUN cd /usr/src/app
-COPY package.json /usr/src/apP
+COPY package.json /usr/src/app
 RUN npm install
-COPY . /usr/src/apP
+COPY . /usr/src/app
 
 CMD ["npm", "run", "start"]
