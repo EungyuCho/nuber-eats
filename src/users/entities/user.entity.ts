@@ -28,6 +28,6 @@ export class User extends CoreEntity {
   password: string;
 
   @Column()
-  @Field(type => String)
+  @Field(type => UserRole)
   role: UserRole;
 }
